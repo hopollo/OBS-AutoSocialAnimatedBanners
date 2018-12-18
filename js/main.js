@@ -142,5 +142,5 @@ if (interval == "demo") {
     } else {
       i = 0;
     }
-  }, ((interval * 1000) + (timeOut * 1000) * 60));
+  }, ((interval * 60 * 1000) + timeOut));
 }
