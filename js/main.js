@@ -15,7 +15,7 @@ let width           = url.searchParams.get('width')          || 272;
 let height          = url.searchParams.get('height')         || 72;
 let animation       = url.searchParams.get('animation')      || 'slide-top';
 let animationSpeed  = url.searchParams.get('speed')          || 3;
-let interval        = url.searchParams.get('interval')       || '5';
+let interval        = url.searchParams.get('interval')       || 5;
 
 console.log("executed");
 $('body').css({"width": width, "height": height});
@@ -100,6 +100,8 @@ function animate() {
 
 const bannerCount = $('.banner__item').length;
 const timeOut = (animationSpeed * 2); // Seconds
+const timer = interval * 60 * 1000;
+console.log(timer);
 let i = 0;
 /*
 if (interval.includes("s")) { 
@@ -134,13 +136,13 @@ if (interval == "demo") {
   setInterval(() => {
     if (i < bannerCount) {
       $(`.banner__item:eq(${i})`).addClass('active');
-      animate();
+      $('.active').attr('style', `animation: ${animation} ${animationSpeed}s alternate 2`);
       setTimeout(()=> {
         $(`.banner__item:eq(${i})`).removeClass('active');
         i++;
-      }, timeOut);
+      }, timeOut * 1000);
     } else {
       i = 0;
     }
-  }, ((interval * 60 * 1000) + timeOut));
+  }, timer);
 }
