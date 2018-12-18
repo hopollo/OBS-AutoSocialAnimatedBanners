@@ -115,7 +115,7 @@ if (interval.includes("m")) {
 if (interval == "demo") {
   console.log('DEMO STARTED');
   $('body').css('background', 'black');
-  $('body').append('<h1 style="position:absolute; top:50%; left:50%; transform:translate(-50%, -50%);">DEMO, please wait...</h1>');
+  $('body').append('<h1 style="position:absolute; top:50%; left:50%; transform:translate(-50%, -50%);">DEMO, when you will add your socials the screen will be transparent (only DEMO is black), so you will be able to see your banners only inside OBS with some background (gameplay, whatever)</h1>');
   setInterval(() => {
     if (i < bannerCount) {
       $(`.banner__item:eq(${i})`).addClass('active');
