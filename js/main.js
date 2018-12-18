@@ -11,8 +11,8 @@ let others          = url.searchParams.get('others');
 let width           = url.searchParams.get('width')          || 272;
 let height          = url.searchParams.get('height')         || 72;
 let animation       = url.searchParams.get('animation')      || 'slide-top';
-let animationSpeed  = url.searchParams.get('speed')          || '3'; 
-let interval        = url.searchParams.get('interval')       || 5;
+let animationSpeed  = url.searchParams.get('speed')          || 3; 
+let interval        = url.searchParams.get('interval')       || '5';
 
 console.log("executed");
 $('body').css({"width": width, "height": height});
@@ -98,18 +98,48 @@ function animate() {
 const bannerCount = $('.banner__item').length;
 const timeOut = (animationSpeed * 2) * 1000; // Seconds
 let i = 0;
+/*
+if (interval.includes("s")) { 
+  console.log("SECONDES")
+  interval = interval.split('s')[0];
+  var newInterval = (interval + timeOut) * 1000 ;
+}
 
-setInterval(() => {
-  if (i < bannerCount) {
-    $(`.banner__item:eq(${i})`).addClass('active');
-    animate();
-    setTimeout(()=> {
-      $(`.banner__item:eq(${i})`).removeClass('active');
-      i++;
-    }, timeOut);
-  } else {
-    i = 0;
-  }
-}, (interval + timeOut) * 60 * 1000);
+if (interval.includes("m")) { 
+  console.log("MINUTES")
+  interval = interval.split('m')[0];
+  interval = ((interval + timeOut) * 60) * 1000;
+}
+*/
 
+if (interval == "demo") {
+  console.log('DEMO STARTED');
+  $('body').css('background', 'black');
+  $('body').append('<h1 style="position:absolute; top:50%; left:50%; transform:translate(-50%, -50%);">DEMO, please wait...</h1>');
+  setInterval(() => {
+    if (i < bannerCount) {
+      $(`.banner__item:eq(${i})`).addClass('active');
+      $('.active').attr('style', `animation: ${animation} 2s alternate 2`);
+      setTimeout(()=> {
+        $(`.banner__item:eq(${i})`).removeClass('active');
+        i++;
+      }, 4000);
+    } else {
+      i = 0;
+    }
+  }, 4500);
+} else {
 
+  setInterval(() => {
+    if (i < bannerCount) {
+      $(`.banner__item:eq(${i})`).addClass('active');
+      animate();
+      setTimeout(()=> {
+        $(`.banner__item:eq(${i})`).removeClass('active');
+        i++;
+      }, timeOut);
+    } else {
+      i = 0;
+    }
+  }, (interval + timeOut) * 60 * 1000);
+}
