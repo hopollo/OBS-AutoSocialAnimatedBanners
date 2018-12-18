@@ -7,6 +7,9 @@ let twitter         = url.searchParams.get('twitter');
 let twitch          = url.searchParams.get('twitch');
 let snapchat        = url.searchParams.get('snapchat');
 let others          = url.searchParams.get('others');
+let color           = url.searchParams.get('color')          || 'black';
+$('body').css('color', color);
+$('.banners__container').css('border-color', `${color}`);
 
 let width           = url.searchParams.get('width')          || 272;
 let height          = url.searchParams.get('height')         || 72;
@@ -114,8 +117,7 @@ if (interval.includes("m")) {
 
 if (interval == "demo") {
   console.log('DEMO STARTED');
-  $('body').css('background', 'black');
-  $('body').append('<h1 style="position:absolute; top:50%; left:50%; transform:translate(-50%, -50%);">DEMO, when you will add your socials the screen will be transparent (only DEMO is black), so you will be able to see your banners only inside OBS with some background (gameplay, whatever)</h1>');
+  $('body').append('<h1 style="position:absolute; top:50%; left:50%; transform:translate(-50%, -50%);">DEMO, enjoy those banners on your OBS so everybody can see them while streaming.</h1>');
   setInterval(() => {
     if (i < bannerCount) {
       $(`.banner__item:eq(${i})`).addClass('active');
