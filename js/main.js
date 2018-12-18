@@ -14,7 +14,7 @@ $('.banners__container').css('border-color', `${color}`);
 let width           = url.searchParams.get('width')          || 272;
 let height          = url.searchParams.get('height')         || 72;
 let animation       = url.searchParams.get('animation')      || 'slide-top';
-let animationSpeed  = url.searchParams.get('speed')          || 3; 
+let animationSpeed  = url.searchParams.get('speed')          || 3;
 let interval        = url.searchParams.get('interval')       || '5';
 
 console.log("executed");
@@ -70,7 +70,7 @@ function buildtwitter() {
   buildBanner(icon, name, description);
 }
 
-function buildtwitch() {
+function buildTwitch() {
   let icon = '<i class="fab fa-twitch"></i>';
   let name = twitter;
   let description = "Follow :";
@@ -142,5 +142,5 @@ if (interval == "demo") {
     } else {
       i = 0;
     }
-  }, (interval + timeOut) * 60 * 1000);
+  }, ((interval * 1000) + (timeOut * 1000) * 60));
 }
