@@ -16,4 +16,4 @@ exemple : https://obsautobanners.netlify.com/?twitter=@HoPolloTV&youtube=HoPollo
   **animation:**  Animation type/name                     : &animation=NAME (default is slide-top)\
   **speed:**      Animation speed (in seconds)            : &speed=VALUE (default is 3)\
   **interval:**   Interval between 2 banners (in minutes) : &interval=VALUE (default is 5)\
-  **color:**      Colorize everything (expect from the background) : &color=NAME|HEX (default is black)
+  **color:**      Colorize everything (expect from the background) : &color=NAME|RGB (default is black)
