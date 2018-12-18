@@ -2,7 +2,7 @@
 Automaticly built &amp; animated social banners for OBS 
 
 ## Usage : make sure **?** is first element on your link and all others must begins with **&**
-exemple : https://obsautobanners.netlify.com/?twitter=@HoPolloTV&youtube=HoPollo&facebook=HoPollo&interval=demo
+exemple : https://obsautobanners.netlify.com/?twitter=@HoPolloTV&youtube=HoPollo&facebook=HoPollo&interval=demo&color=blue
 
 ## Features :
   **instagram :** Show Instragram banner                  : &instagram=NAME\
@@ -15,4 +15,5 @@ exemple : https://obsautobanners.netlify.com/?twitter=@HoPolloTV&youtube=HoPollo
   **width:**      Width of banners                        : &hide=true|false (default is 272)\
   **animation:**  Animation type/name                     : &animation=NAME (default is slide-top)\
   **speed:**      Animation speed (in seconds)            : &speed=VALUE (default is 3)\
-  **interval:**   Interval between 2 banners (in minutes) : &interval=VALUE (default is 5)
+  **interval:**   Interval between 2 banners (in minutes) : &interval=VALUE (default is 5)\
+  **color:**      Colorize everything (expect from the background) : &color=NAME|HEX (default is black)
