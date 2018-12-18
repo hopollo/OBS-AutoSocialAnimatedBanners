@@ -72,7 +72,7 @@ function buildtwitter() {
 
 function buildTwitch() {
   let icon = '<i class="fab fa-twitch"></i>';
-  let name = twitter;
+  let name = twitch;
   let description = "Follow :";
 
   buildBanner(icon, name, description);
