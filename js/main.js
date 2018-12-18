@@ -99,7 +99,7 @@ function animate() {
 }
 
 const bannerCount = $('.banner__item').length;
-const timeOut = (animationSpeed * 2) * 1000; // Seconds
+const timeOut = (animationSpeed * 2); // Seconds
 let i = 0;
 /*
 if (interval.includes("s")) { 
@@ -131,7 +131,6 @@ if (interval == "demo") {
     }
   }, 4500);
 } else {
-
   setInterval(() => {
     if (i < bannerCount) {
       $(`.banner__item:eq(${i})`).addClass('active');
