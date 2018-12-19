@@ -7,6 +7,7 @@ let twitter         = url.searchParams.get('twitter');
 let twitch          = url.searchParams.get('twitch');
 let snapchat        = url.searchParams.get('snapchat');
 let discord         = url.searchParams.get('discord');
+let amazon          = url.searchParams.get('amazon');
 let others          = url.searchParams.get('others');
 let color           = url.searchParams.get('color')          || 'black';
 $('body').css('color', color);
@@ -28,6 +29,7 @@ if (twitter   != null) { buildtwitter();   }
 if (twitch    != null) { buildTwitch();    }
 if (snapchat  != null) { buildSnapchat();  }
 if (discord   != null) { buildDiscord();   }
+if (amazon    != null) { buildAmazon();    }
 if (others    != null) { buildOthers();    }
 
 function buildBanner(img, title, subTitle) {
@@ -62,6 +64,14 @@ function buildYoutube() {
   let description = "Abonnez-vous :";
 
   buildBanner(icon, name, description);
+}
+
+function buildAmazon() {
+  let icon = '<i class="fab fa-amazon"></i>';
+  let name = amazon;
+  let description = "Code Promo :";
+
+  buildAmazon(icon, name, description);
 }
 
 function buildtwitter() {
