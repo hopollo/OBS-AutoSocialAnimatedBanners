@@ -19,7 +19,6 @@ let freez           = url.searchParams.get('freez')          || 5;
 let animationSpeed  = url.searchParams.get('speed')          || 3;
 let interval        = url.searchParams.get('interval')       || 5;
 
-console.log("executed");
 $('body').css({"width": width, "height": height});
 
 if (instagram != null) { buildInstagram(); }
