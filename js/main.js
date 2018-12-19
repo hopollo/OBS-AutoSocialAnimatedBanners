@@ -71,7 +71,7 @@ function buildAmazon() {
   let name = amazon;
   let description = "Code Promo :";
 
-  buildAmazon(icon, name, description);
+  buildBanner(icon, name, description);
 }
 
 function buildtwitter() {
