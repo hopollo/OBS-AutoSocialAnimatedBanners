@@ -6,6 +6,7 @@ let youtube         = url.searchParams.get('youtube');
 let twitter         = url.searchParams.get('twitter');
 let twitch          = url.searchParams.get('twitch');
 let snapchat        = url.searchParams.get('snapchat');
+let discord         = url.searchParams.get('discord');
 let others          = url.searchParams.get('others');
 let color           = url.searchParams.get('color')          || 'black';
 $('body').css('color', color);
@@ -14,6 +15,7 @@ $('.banners__container').css('border-color', `${color}`);
 let width           = url.searchParams.get('width')          || 272;
 let height          = url.searchParams.get('height')         || 72;
 let animation       = url.searchParams.get('animation')      || 'slide-top';
+let freez           = url.searchParams.get('freez')          || 5;
 let animationSpeed  = url.searchParams.get('speed')          || 3;
 let interval        = url.searchParams.get('interval')       || 5;
 
@@ -26,6 +28,7 @@ if (youtube   != null) { buildYoutube();   }
 if (twitter   != null) { buildtwitter();   }
 if (twitch    != null) { buildTwitch();    }
 if (snapchat  != null) { buildSnapchat();  }
+if (discord   != null) { buildDiscord();   }
 if (others    != null) { buildOthers();    }
 
 function buildBanner(img, title, subTitle) {
@@ -74,6 +77,14 @@ function buildTwitch() {
   let icon = '<i class="fab fa-twitch"></i>';
   let name = twitch;
   let description = "Follow :";
+
+  buildBanner(icon, name, description);
+}
+
+function buildDiscord() {
+  let icon = '<i class="fab fa-discord"></i>';
+  let name = discord;
+  let description = "Rejoignez moi :";
 
   buildBanner(icon, name, description);
 }
@@ -140,7 +151,7 @@ if (interval == "demo") {
       setTimeout(()=> {
         $(`.banner__item:eq(${i})`).removeClass('active');
         i++;
-      }, timeOut * 1000);
+      }, freez * 1000);
     } else {
       i = 0;
     }
