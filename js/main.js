@@ -138,8 +138,8 @@ if (interval.includes("m")) {
 */
 
 if (interval == "demo") {
-  console.log('DEMO STARTED');
-  $('body').append('<h1 style="position:absolute; top:50%; left:50%; transform:translate(-50%, -50%);">DEMO, enjoy those banners on your OBS so everybody can see them while streaming.</h1>');
+  //console.log('DEMO STARTED');
+  //$('body').append('<h1 style="position:absolute; top:50%; left:50%; transform:translate(-50%, -50%);">DEMO, enjoy those banners on your OBS so everybody can see them while streaming.</h1>');
   setInterval(() => {
     if (i < bannerCount) {
       $(`.banner__item:eq(${i})`).addClass('active');
