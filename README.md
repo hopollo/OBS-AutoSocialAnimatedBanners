@@ -9,8 +9,8 @@ exemple : https://obsautobanners.netlify.com/?twitter=@HoPolloTV&youtube=HoPollo
   **facebook:**   Show Facebook banner                    : &facebook=NAME\
   **youtube:**    Show Youtube banner                     : &youtube=NAME\
   **twitter:**    Show Twitter banner                     : &twitter=NAME\
-  **twitch:**     Show Twitch banner                      : $twitch=NAME\
-  **discord**     Show Discord banner                     : $discord=NAME\
+  **twitch:**     Show Twitch banner                      : &twitch=NAME\
+  **discord**     Show Discord banner                     : &discord=NAME\
   **snapchat:**   Show Snapchat banner                    : &snapchat=NAME\
   **amazon:**     Show Amazon banner                      : &amazon=NAME\
   **height:**     Height of banners                       : &height=VALUE (default is 72)\
