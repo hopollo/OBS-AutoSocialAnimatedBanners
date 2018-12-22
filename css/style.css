@@ -71,6 +71,14 @@ html, body {
     -webkit-transform: translateX(-100%);
             transform: translateX(-100%);
   }
+  25%,
+  50%,
+  75% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  80%,
+  90%,
   100% {
     -webkit-transform: translateX(0%);
             transform: translateX(0%);
@@ -82,6 +90,14 @@ html, body {
     -webkit-transform: translateX(-100%);
             transform: translateX(-100%);
   }
+  25%,
+  50%,
+  75% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  80%,
+  90%,
   100% {
     -webkit-transform: translateX(0%);
             transform: translateX(0%);
@@ -93,6 +109,14 @@ html, body {
     -webkit-transform: translateX(100%);
             transform: translateX(100%);
   }
+  25%,
+  50%,
+  75% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  80%,
+  90%,
   100% {
     -webkit-transform: translateX(0%);
             transform: translateX(0%);
@@ -104,6 +128,14 @@ html, body {
     -webkit-transform: translateX(100%);
             transform: translateX(100%);
   }
+  25%,
+  50%,
+  75% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  80%,
+  90%,
   100% {
     -webkit-transform: translateX(0%);
             transform: translateX(0%);
@@ -148,21 +180,41 @@ html, body {
   }
 }
 
-@-webkit-keyframes fade {
+@-webkit-keyframes slide-bottom {
   0% {
-    opacity: 0%;
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
   }
+  25%,
+  50%,
+  75% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+  80%,
+  90%,
   100% {
-    opacity: 100%;
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
   }
 }
 
-@keyframes fade {
+@keyframes slide-bottom {
   0% {
-    opacity: 0%;
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
   }
+  25%,
+  50%,
+  75% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+  80%,
+  90%,
   100% {
-    opacity: 100%;
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
   }
 }
 /*# sourceMappingURL=style.css.map */
