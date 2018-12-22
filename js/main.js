@@ -16,7 +16,7 @@ $('.banners__container').css('border-color', `${color}`);
 let width           = url.searchParams.get('width')          || 272;
 let height          = url.searchParams.get('height')         || 72;
 let animation       = url.searchParams.get('animation')      || 'slide-top';
-let freez           = url.searchParams.get('freez')          || 5;
+let freez           = url.searchParams.get('freez')          || 3;
 let animationSpeed  = url.searchParams.get('speed')          || 3;
 let interval        = url.searchParams.get('interval')       || 5;
 
@@ -138,8 +138,8 @@ if (interval.includes("m")) {
 */
 
 if (interval == "demo") {
-  //console.log('DEMO STARTED');
-  //$('body').append('<h1 style="position:absolute; top:50%; left:50%; transform:translate(-50%, -50%);">DEMO, enjoy those banners on your OBS so everybody can see them while streaming.</h1>');
+  console.log('DEMO STARTED');
+  $('body').append('<h1 style="position:absolute; top:50%; left:50%; transform:translate(-50%, -50%);">DEMO, enjoy those banners on your OBS so everybody can see them while streaming.</h1>');
   setInterval(() => {
     if (i < bannerCount) {
       $(`.banner__item:eq(${i})`).addClass('active');
@@ -160,7 +160,7 @@ if (interval == "demo") {
       setTimeout(()=> {
         $(`.banner__item:eq(${i})`).removeClass('active');
         i++;
-      }, freez * 1000);
+      }, (freez * 2) * 1000);
     } else {
       i = 0;
     }
