@@ -15,6 +15,7 @@ $('.banners__container').css('border-color', `${color}`);
 
 let width           = url.searchParams.get('width')          || 272;
 let height          = url.searchParams.get('height')         || 72;
+let borders         = url.searchParams.get('border')         || true;
 let animation       = url.searchParams.get('animation')      || 'slide-top';
 let freez           = url.searchParams.get('freez')          || 3;
 let animationSpeed  = url.searchParams.get('speed')          || 3;
@@ -32,6 +33,7 @@ if (discord   != null) { buildDiscord();   }
 if (amazon    != null) { buildAmazon();    }
 if (others    != null) { buildOthers();    }
 
+/*
 function buildBanner(img, title, subTitle) {
   $('.banners__container').append(`
     <li class="banner__item">
@@ -40,6 +42,20 @@ function buildBanner(img, title, subTitle) {
       <div class="item__subTitle">${subTitle}</div>
     </li>
   `);
+
+  if (borders === 'true') { $('.banner__item').css({'border': `2px solid ${color}`, 'border-radius': '5px'}); }
+}
+*/
+
+function buildBanner(img, title) {
+  $('.banners__container').append(`
+      <li class="banner__item">
+        <div class="item__img">${img}</div>
+        <div class="item__title">${title}</div>
+      </li>
+  `);
+
+  if (borders === 'true') { $('.banner__item').css({'border': `2px solid ${color}`, 'border-radius': '5px'}); }
 }
 
 function buildInstagram() {
@@ -47,7 +63,8 @@ function buildInstagram() {
   let name        = instagram;
   let description = "Suivez-moi :";
 
-  buildBanner(icon, name, description);
+  //buildBanner(icon, name, description);
+  buildBanner(icon, name);
 }
 
 function buildFacebook() {
@@ -55,7 +72,8 @@ function buildFacebook() {
   let name = facebook;
   let description = "Likez :";
   
-  buildBanner(icon, name, description);
+  //buildBanner(icon, name, description);
+  buildBanner(icon, name);
 }
 
 function buildYoutube() {
@@ -63,7 +81,8 @@ function buildYoutube() {
   let name = youtube;
   let description = "Abonnez-vous :";
 
-  buildBanner(icon, name, description);
+  //buildBanner(icon, name, description);
+  buildBanner(icon, name);
 }
 
 function buildAmazon() {
@@ -71,7 +90,8 @@ function buildAmazon() {
   let name = amazon;
   let description = "Code Promo :";
 
-  buildBanner(icon, name, description);
+  //buildBanner(icon, name, description);
+  buildBanner(icon, name);
 }
 
 function buildtwitter() {
@@ -79,7 +99,8 @@ function buildtwitter() {
   let name = twitter;
   let description = "Suivez-moi :";
 
-  buildBanner(icon, name, description);
+  //buildBanner(icon, name, description);
+  buildBanner(icon, name);
 }
 
 function buildTwitch() {
@@ -87,7 +108,8 @@ function buildTwitch() {
   let name = twitch;
   let description = "Follow :";
 
-  buildBanner(icon, name, description);
+  //buildBanner(icon, name, description);
+  buildBanner(icon, name);
 }
 
 function buildDiscord() {
@@ -95,7 +117,8 @@ function buildDiscord() {
   let name = discord;
   let description = "Rejoignez moi :";
 
-  buildBanner(icon, name, description);
+  //buildBanner(icon, name, description);
+  buildBanner(icon, name);
 }
 
 function buildSnapchat() {
@@ -103,7 +126,8 @@ function buildSnapchat() {
   let name = snapchat;
   let description = 'Ajoutez :';
 
-  buildBanner(icon, name, description);
+  //buildBanner(icon, name, description);
+  buildBanner(icon, name);
 }
 
 function buildOthers() {
@@ -111,7 +135,8 @@ function buildOthers() {
   let name = twitter;
   let description = "";
 
-  buildBanner(icon, name, description);
+  //buildBanner(icon, name, description);
+  buildBanner(icon, name);
 }
 
 function animate() {
@@ -143,7 +168,7 @@ if (interval == "demo") {
   setInterval(() => {
     if (i < bannerCount) {
       $(`.banner__item:eq(${i})`).addClass('active');
-      $('.active').attr('style', `animation: ${animation} 2s alternate 2`);
+      $('.active').css('animation', `${animation} 2s alternate 2`);
       setTimeout(()=> {
         $(`.banner__item:eq(${i})`).removeClass('active');
         i++;
@@ -156,7 +181,7 @@ if (interval == "demo") {
   setInterval(() => {
     if (i < bannerCount) {
       $(`.banner__item:eq(${i})`).addClass('active');
-      $('.active').attr('style', `animation: ${animation} ${animationSpeed}s alternate 2`);
+      $('.active').css('animation', `${animation} ${animationSpeed}s alternate 2`);
       setTimeout(()=> {
         $(`.banner__item:eq(${i})`).removeClass('active');
         i++;
