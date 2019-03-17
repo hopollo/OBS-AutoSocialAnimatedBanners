@@ -2,7 +2,7 @@
 Automaticly built &amp; animated social banners for OBS 
 
 ## Usage : make sure **?** is first element on your link and all others must begins with **&**
-exemple : https://obsautobanners.netlify.com/?twitter=@HoPolloTV&youtube=HoPollo&facebook=HoPollo&interval=demo&color=blue&border=false
+exemple : https://obsautobanners.netlify.com/v2/?twitter=@HoPolloTV&youtube=HoPollo&facebook=HoPollo&interval=demo&color=blue&border=false
 
 ## Features :
   **instagram :** Show Instragram banner                  : &instagram=NAME\
