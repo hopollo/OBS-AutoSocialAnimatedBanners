@@ -5,9 +5,7 @@
             box-sizing: border-box;
   }
   
-  li {
-    text-decoration: none;
-  }
+  li { text-decoration: none; }
   
   html, body {
     font-family: "Titillium Web", sans-serif;
@@ -15,55 +13,21 @@
     overflow: hidden;
   }
   
-  .wrapper {
-    text-align: center;
-  }
-  
-  .wrapper li:not(.active) {
-    display: none;
-  }
+  .wrapper li:not(.active) { display: none; }
   
   .banner__item {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 20% 80%;
-        grid-template-columns: 20% 80%;
-        /*grid-template-areas: "icon subTitle" "icon title";*/
-        grid-template-areas: "icon title" "icon title";
-    -ms-grid-rows: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-    height: 100%;
-    width: 100%;
+    display: flex;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
   }
   
-  .banner__item .item__img {
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 2;
-    -ms-grid-column: 1;
-    grid-area: icon;
-  }
-  
   .banner__item .item__img i {
-    margin-left: 15px;
+    margin: 0 10px;
     font-size: 3.5em;
   }
   
-  .banner__item .item__title {
-    -ms-grid-row: 2;
-    -ms-grid-column: 2;
-    grid-area: title;
-    font-size: 2.5em;
-  }
-  
-  .banner__item .item__subTitle {
-    -ms-grid-row: 1;
-    -ms-grid-column: 2;
-    grid-area: subTitle;
-    font-size: 1.2em;
-  }
+  .banner__item .item__title { font-size: 2em; }
   
   @-webkit-keyframes slide-left {
     0% {
@@ -216,4 +180,3 @@
               transform: translateY(0%);
     }
   }
-  /*# sourceMappingURL=style.css.map */
