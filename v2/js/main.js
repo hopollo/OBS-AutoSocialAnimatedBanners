@@ -10,7 +10,7 @@ let discord         = url.searchParams.get('discord');
 let amazon          = url.searchParams.get('amazon');
 let others          = url.searchParams.get('others');
 let color           = url.searchParams.get('color')          || 'black';
-if (color.includes(',') == true) { $('body').css('color', linear-gradient(color.split(',')[0], color.split(',')[1])); } else { $('body').css('color', color); };
+if (color.includes(',') == true) { $('body').css('color', 'linear-gradient(color.split(',')[0], color.split(',')[1])'); } else { $('body').css('color', color); };
 $('.banners__container').css('border-color', `${color}`);
 
 let width           = url.searchParams.get('width')          || 272;
